@@ -193,6 +193,15 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
 
 .btn-full { width: 100%; }
 
+/* --- logo photo --*/
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 /* ── NAVBAR ── */
 .navbar {
   position: fixed;
@@ -667,6 +676,24 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
   transform: translateX(8px);
+}
+
+/* Auto active (scroll effect) */
+.highlight-card.active {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+}
+
+/* Left border animation */
+.highlight-card.active::before {
+  height: 100%;
+}
+
+/* Icon animation */
+.highlight-card.active .highlight-icon {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--highlight);
 }
 
 .highlight-card:hover::before {
